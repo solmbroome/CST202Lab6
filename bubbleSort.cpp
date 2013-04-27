@@ -7,13 +7,25 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 // Name: BubbleSort
-// Author: Caleb Donovick
+// Author: [Scott Olmstead] - Caleb Donovick
 // Description:
 ///////////////////////////////////////////////////////////////////////////////
 void BubbleSort(int dataArray[], int length)
 {
-    //Function Here
+    int iteration;
+    int index;
+    int tempInt;
 
-    ///!!! TEST CALL
-    cout << "Called BubbleSort()" << endl;
+    for (iteration = 1; iteration < length; iteration++)
+    {
+        for (index = 0; index < length - iteration; index++)
+        {
+            if(dataArray[index] > dataArray[index + 1])
+            {
+                tempInt = dataArray[index];
+                dataArray[index] = dataArray[index + 1];
+                dataArray[index + 1] = tempInt;
+            }
+        }
+    }
 }

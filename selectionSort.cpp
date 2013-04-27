@@ -6,37 +6,53 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 // Name: MinLocation
-// Author: Sharon Smalls-Williams
+// Author: [Scott Olmstead] - Sharon Smalls-Williams
 // Description:
 ///////////////////////////////////////////////////////////////////////////////
 int MinLocation(int dataArray[], int first, int last)
 {
-    ///!!! TEST CALL
-    cout << "Called MinLocation()" << endl;
+    int location;
+    int minIndex;
+
+    minIndex = first;
+    for (location = first + 1; location <= last; location++)
+    {
+        if (dataArray[location] < dataArray[minIndex])
+        {
+            minIndex = location;
+        }
+    }
+
+    return minIndex;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 // Name: Swap
-// Author: Sharon Smalls-Williams
+// Author: [Scott Olmstead] - Sharon Smalls-Williams
 // Description:
 ///////////////////////////////////////////////////////////////////////////////
 void Swap(int dataArray[], int first, int second)
 {
-    //Code goes here
+    int tempInt;
 
-    ///!!! TEST CALL
-    cout << "Called Swap()" << endl;
+    tempInt = dataArray[first];
+    dataArray[first] = dataArray[second];
+    dataArray[second] = tempInt;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 // Name: SelectionSort
-// Author: Sharon Smalls-Williams
+// Author: [Scott Olmstead] - Sharon Smalls-Williams
 // Description:
 ///////////////////////////////////////////////////////////////////////////////
 void SelectionSort(int dataArray[], int length)
 {
-    //Code goes here
+    int location;
+    int minIndex;
 
-    ///!!! TEST CALL
-    cout << "Called SelectionSort()" << endl;
+    for (location = 0; location < length; location++)
+    {
+        minIndex = MinLocation(dataArray,location,length-1);
+        Swap(dataArray, location, minIndex);
+    }
 }

@@ -84,6 +84,7 @@
     <Text Include="Result3.txt" />
     <Text Include="Result4.txt" />
     <Text Include="SmallRan.txt" />
+    <Text Include="ToDo.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="bubbleSort.cpp" />
