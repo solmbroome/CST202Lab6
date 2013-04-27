@@ -7,6 +7,9 @@
 
 #include "standard.h"
 
+const int OUTPUT_COULMNS = 4;
+const int OUTPUT_COULMN_WIDTH = 10;
+
 void CopyArray(int originalArray[],
                int sortedArray[],
                int& numberOfValues);
@@ -27,14 +30,14 @@ void OutputTitle(ofstream &outputFile,
                  string title);
 
 void OutputDivider(ofstream& outputFile,
-				     char fillChar = '=',
-				     int fillWidth = CONSOLE_WIDTH);
+                   char fillChar = '=',
+                   int fillWidth = OUTPUT_WIDTH);
 
 void CenterOutput(ofstream& outputFile,
-				  string outString,
-				  int screenWidth = CONSOLE_WIDTH);
+                  string outString,
+                  int screenWidth = OUTPUT_WIDTH);
 
 void OutputTeamInformation(ofstream& outputFile,
-							  int width = CONSOLE_WIDTH);
+                           int width = OUTPUT_WIDTH);
 
 #endif

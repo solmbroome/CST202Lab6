@@ -13,7 +13,7 @@
 
 using namespace std;
 
-const int OUTPUT_WIDTH = 80;
+const int OUTPUT_WIDTH = 60;
 const int CONSOLE_WIDTH = 60;
 const int FILE_COUNT = 4;
 const int MAX_NAME_LENGTH = 30;

@@ -9,50 +9,108 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 // Name: CopyArray
-// Author: Sharon Smalls-Williams
-// Description:
+// Author: Scott Olmstead
+// Description: Copies the original array into the array to be sorted
 ///////////////////////////////////////////////////////////////////////////////
 void CopyArray(int originalArray[],
                int sortedArray[],
                int& numberOfValues)
 {
-    //Your function here
-    cout << "Called CopyArray()" << endl;
+    int index;
+
+    //For all the records in the original array
+    for(index = 0; index < numberOfValues; index++)
+    {
+        //Set the position, index, in the sorted array to the 
+        // position, index, in the original array
+        sortedArray[index] = originalArray[index];
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 // Name: ReadArrayData
-// Author: Sharon Smalls-Williams
-// Description: 
+// Author: Scott Olmstead
+// Description: Reads all the integers in from the input file
 ///////////////////////////////////////////////////////////////////////////////
 void ReadArrayData(ifstream& inputFile,
                    int dataArray[],
                    int& numberOfValues)
 {
-    //Your Function Here
-    ///!!! TEST CALL
-    cout << "Called ReadArrayData()" << endl;
+    int tempNumber;
+    
+    //Initialize the number of values to zero for counting
+    numberOfValues = 0;
+
+    //While there is data to read from the input file
+    while(!(inputFile.eof()))
+    {
+        //Get the number from this line of the input file
+        inputFile >> tempNumber;
+
+        //Set the array position to this number
+        dataArray[numberOfValues] = tempNumber;
+        
+        //Increment the number of values in the array
+        numberOfValues++;
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 // Name: OutputArray
 // Author: Scott Olmstead
-// Description: 
+// Description: Outputs all the indexes of an integer array to the output file
+//               with a heading.
 ///////////////////////////////////////////////////////////////////////////////
 void OutputArray(ofstream& outputFile,
                  int dataArray[],
                  int& numberOfValues,
                  string title)
 {
-    //Your Function Here
-    ///!!! TEST CALL
-    cout << "Called OutputArray()" << endl;
+    int index;
+
+    int tempOutputWidth = OUTPUT_COULMNS * OUTPUT_COULMN_WIDTH;
+
+    //Output some whitespace to the output file
+    outputFile << endl;
+
+    //Output a divider to the output file.
+    OutputDivider(outputFile,'-',tempOutputWidth);
+
+    //Output the title to the output file
+    CenterOutput(outputFile,title,tempOutputWidth);
+
+    //Output a divider to the output file.
+    OutputDivider(outputFile,'-',tempOutputWidth);
+
+    //For all the indexes in the passed array
+    for(index = 0; index < numberOfValues; index++)
+    {
+        //Output the number at this index to the output file.
+        outputFile << left << setw(OUTPUT_COULMN_WIDTH) 
+                   << setfill(' ') << dataArray[index];
+
+        //If there are enough columns and this isn't the last number
+        if(((index + 1) % OUTPUT_COULMNS == 0) && 
+            (index + 1 != numberOfValues))
+        {
+            //Insert a line break in the output file
+            outputFile << endl;
+        }
+    }
+
+    //Insert a line break in the output file
+    outputFile << endl;
+    
+    //Output a divider to the output file.
+    OutputDivider(outputFile,'_',tempOutputWidth);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 // Name: PromptUserInput
 // Author: Scott Olmstead
-// Description: 
+// Description: Prompts the user as to what file they would like to open.
+//              Then, based on their choice, opens the input and output files
+//               associated with that choice.
 ///////////////////////////////////////////////////////////////////////////////
 void PromptUserInput(ofstream& outputFile,
                      ifstream& inputFile)
