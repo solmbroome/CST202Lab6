@@ -9,20 +9,20 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 // Name: CopyArray
-// Authors: Caleb Donovick & Scott Olmstead
-// Description: Copies the original array into the array to be sorted
+// Author: Caleb Donovick
+// Description: Copies all the members of an int array into a second int array
 ///////////////////////////////////////////////////////////////////////////////
 void CopyArray(int originalArray[],
                int sortedArray[],
-               int& numberOfValues)
+               int numberOfValues)
 {
-    int index;
+    //int variables 
+    int index; 
 
-    //For all the records in the original array
-    for(index = 0; index < numberOfValues; index++)
+    //Use a for loop to copy the old array into the new array 
+    for(index = 0; index < numberOfValues; index++) 
     {
-        //Set the position, index, in the sorted array to the 
-        // position, index, in the original array
+        //Store the member of the original array in the sortedArray
         sortedArray[index] = originalArray[index];
     }
 }

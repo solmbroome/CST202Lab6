@@ -12,7 +12,7 @@ const int OUTPUT_COULMN_WIDTH = 10;
 
 void CopyArray(int originalArray[],
                int sortedArray[],
-               int& numberOfValues);
+               int numberOfValues);
 
 void ReadArrayData(ifstream& outputFile,
                    int dataArray[],
