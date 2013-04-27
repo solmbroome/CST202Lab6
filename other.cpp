@@ -67,8 +67,10 @@ void OutputArray(ofstream& outputFile,
                  string title)
 {
     int index;
-
-    int tempOutputWidth = OUTPUT_COULMNS * OUTPUT_COULMN_WIDTH;
+    int tempOutputWidth;
+    
+    //Set the output width to the length of the four columns
+    tempOutputWidth = OUTPUT_COULMNS * OUTPUT_COULMN_WIDTH;
 
     //Output some whitespace to the output file
     outputFile << endl;
