@@ -29,26 +29,28 @@ void CopyArray(int originalArray[],
 
 ///////////////////////////////////////////////////////////////////////////////
 // Name: ReadArrayData
-// Authors: Sharon Smalls-Williams and Scott Olmstead
-// Description: Reads all the integers in from the input file
+// Author: Sharon Smalls-Williams
+// Description: Read in the data from the file until there is no more data to
+//               read in.
 ///////////////////////////////////////////////////////////////////////////////
 void ReadArrayData(ifstream& inputFile,
                    int dataArray[],
                    int& numberOfValues)
 {
-    int tempNumber;
+    ///!!! Waiting for final version from Sharon @ 9:51 4.27.2013
+    int number;
     
     //Initialize the number of values to zero for counting
     numberOfValues = 0;
 
     //While there is data to read from the input file
-    while(!(inputFile.eof()))
+    while(!(inputFile.eof()) && (numberOfValues < MAX_NUMBERS))
     {
         //Get the number from this line of the input file
-        inputFile >> tempNumber;
+        inputFile >> number;
 
         //Set the array position to this number
-        dataArray[numberOfValues] = tempNumber;
+        dataArray[numberOfValues] = number;
         
         //Increment the number of values in the array
         numberOfValues++;
@@ -189,6 +191,8 @@ void PromptUserInput(ofstream& outputFile,
              << " This program will not produce expected results";
     }
 
+    //Output a message to the console window stating what the 
+    // output file is named.
     cout << endl << "Writing output to: " << OUTPUT_NAMES[choice - 1] 
          << endl;
 

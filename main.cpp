@@ -11,9 +11,9 @@ int main(void)
     ofstream outputFile;
 
     int numberOfValues;
-    int dataArray[MAX_ARRAY_SIZE];
-    int selectionDataArray[MAX_ARRAY_SIZE];
-    int bubbleDataArray[MAX_ARRAY_SIZE];
+    int dataArray[MAX_NUMBERS];
+    int selectionDataArray[MAX_NUMBERS];
+    int bubbleDataArray[MAX_NUMBERS];
 
     //Prompt the user to choose an input file to process
     PromptUserInput(outputFile,inputFile);
