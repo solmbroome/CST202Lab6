@@ -74,7 +74,7 @@ void OutputArray(ofstream& outputFile,
     int index;
 
     //Output a divider to the output file.
-    OutputDivider(outputFile,'_',ARRAY_OUTPUT_WIDTH);
+    OutputDivider(outputFile,'-',ARRAY_OUTPUT_WIDTH);
 
     //Output the title to the output file
     CenterOutput(outputFile,title,ARRAY_OUTPUT_WIDTH);
@@ -114,7 +114,7 @@ void OutputSwapsAndCompares(ofstream& outputFile,
                             string sortName)
 {
     //Output a divider to the output file.
-    OutputDivider(outputFile,'_',ARRAY_OUTPUT_WIDTH);
+    OutputDivider(outputFile,'-',ARRAY_OUTPUT_WIDTH);
     
     //Append title to the sort name
     sortName.append(": Comparisons & Swaps");
