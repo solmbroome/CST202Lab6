@@ -23,7 +23,7 @@ ________________________________________
 ________________________________________
 
 ________________________________________
-Comparisons and Swaps for Selection Sort
+   Selection Sort Comparisons & Swaps
 ========================================
 Number of Comparisons:   45
 Number of Swaps:         10
@@ -46,7 +46,7 @@ ________________________________________
 ________________________________________
 
 ________________________________________
-Comparisons and Swaps for Bubble Sort
+    Bubble Sort Comparisons & Swaps
 ========================================
 Number of Comparisons:   45
 Number of Swaps:         0

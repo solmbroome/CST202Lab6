@@ -116,10 +116,11 @@ void OutputSwapsAndCompares(ofstream& outputFile,
     //Output a divider to the output file.
     OutputDivider(outputFile,'_',ARRAY_OUTPUT_WIDTH);
     
+    //Append title to the sort name
+    sortName.append(" Comparisons & Swaps");
+
     //Output a title for the comparisons and swaps
-    outputFile << "Comparisons and Swaps for " 
-               << sortName
-               << endl;
+    CenterOutput(outputFile,sortName,ARRAY_OUTPUT_WIDTH);
 
     //Output a divider to the output file.
     OutputDivider(outputFile,'=',ARRAY_OUTPUT_WIDTH);
