@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //File Name: bubbleSort.h
-//Programmer: Scott Olmstead, Caleb Donovick, Sharon Smalls-Williams
+//Programmer: Caleb Donovick, Sharon Smalls-Williams, Scott Olmstead
 //Brief Description: This cpp files contains the functions for bubbleSort.h
 ///////////////////////////////////////////////////////////////////////////////
 

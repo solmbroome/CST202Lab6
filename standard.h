@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //File Name:  standard.h
-//Programmer: Scott Olmstead, Caleb Donovick, Sharon Smalls-Williams
+//Programmer: Caleb Donovick, Sharon Smalls-Williams, Scott Olmstead
 //Brief Description: This header file contains the other class definition.
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -18,7 +18,7 @@ const int OUTPUT_WIDTH = 60;
 const int CONSOLE_WIDTH = 60;
 const int FILE_COUNT = 4;
 const int MAX_NAME_LENGTH = 30;
-const int MAX_NUMBERS = 1000;
+const int MAX_NUMBERS = 200;
 
 const string COLLEGE = "Broome Community College";
 const string TEAM_NAME = "Team 1";

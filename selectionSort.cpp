@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //File Name: selectionSort.cpp
-//Programmer: Scott Olmstead, Caleb Donovick, Sharon Smalls-Williams
+//Programmer: Caleb Donovick, Sharon Smalls-Williams, Scott Olmstead
 //Brief Description: This cpp file contains functions for the selectionSort
 //                   header.
 ///////////////////////////////////////////////////////////////////////////////
