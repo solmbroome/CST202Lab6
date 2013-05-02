@@ -117,7 +117,7 @@ void OutputSwapsAndCompares(ofstream& outputFile,
     OutputDivider(outputFile,'_',ARRAY_OUTPUT_WIDTH);
     
     //Append title to the sort name
-    sortName.append(" Comparisons & Swaps");
+    sortName.append(": Comparisons & Swaps");
 
     //Output a title for the comparisons and swaps
     CenterOutput(outputFile,sortName,ARRAY_OUTPUT_WIDTH);

@@ -82,13 +82,13 @@ int main(void)
     OutputArray(outputFile,
                 dataArray,
                 numberOfValues,
-                "Selection Sort Unsorted");
+                "Selection Sort: Unsorted");
 
     //Output the sorted selection sort array to the output file
     OutputArray(outputFile,
                 selectionDataArray,
                 numberOfValues,
-                "Selection Sort Sorted");
+                "Selection Sort: Sorted");
     
     //Output the number of swaps and comparisons that occurred
     // int the selection sort algorithm
@@ -101,13 +101,13 @@ int main(void)
     OutputArray(outputFile,
                 dataArray,
                 numberOfValues,
-                "Bubble Sort Unsorted");
+                "Bubble Sort: Unsorted");
 
     //Output the sorted bubble sort array to the output file
     OutputArray(outputFile,
                 bubbleDataArray,
                 numberOfValues,
-                "Bubble Sort Sorted");
+                "Bubble Sort: Sorted");
 
     //Output the number of swaps and comparisons that occurred
     // int the bubble sort algorithm
