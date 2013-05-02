@@ -1,5 +1,34 @@
-///!!! DOCUMENTATION WILL GO HERE
+///////////////////////////////////////////////////////////////////////////////
+//Lab 6 Grading Block
+//Grade:
+//General Comments:
+//
+///////////////////////////////////////////////////////////////////////////////
 
+///////////////////////////////////////////////////////////////////////////////
+//                            Documentation Block                            //
+///////////////////////////////////////////////////////////////////////////////
+///!!! CLEAN UP AND FINISH
+// Programmers: Caleb Donovick, Sharon Smalls-Williams, Scott Olmstead
+// Project Name: Lab 6
+// I
+//PromptUserInput - Prompt the user to choose an input file to process.
+//
+//OutputTeamInformation - Output the heading for the output file, OutputFile.
+//
+//ReadArrayData - Read the array data from the input file, InputFile, until
+//                all the information is read in.
+//
+//CopyArray - Copy the unsorted array data into the selected sort array.
+//
+//SelectionSort - Perform selection sort on the data, sorting numbers in
+//                ascending order.
+//
+// BubbleSort - Perform bubble sort on the data, sorting numbers in
+//              ascending order.
+//
+//OutputArray - Output the array to the output file, OutputFile.
+//////////////////////////////////////////////////////////////////////////////
 #include "bubbleSort.h"
 #include "other.h"
 #include "selectionSort.h"
@@ -11,6 +40,8 @@ int main(void)
     ofstream outputFile;
 
     int numberOfValues;
+    int selectionSwaps;
+    int bubbleSwaps;
     int dataArray[MAX_NUMBERS];
     int selectionDataArray[MAX_NUMBERS];
     int bubbleDataArray[MAX_NUMBERS];
@@ -31,7 +62,7 @@ int main(void)
     CopyArray(dataArray,selectionDataArray,numberOfValues);
 
     //Perform selection sort on the data
-    SelectionSort(selectionDataArray,numberOfValues);
+    SelectionSort(selectionDataArray,numberOfValues,selectionSwaps);
 
     //Copy the array data into the bubble sort array
     CopyArray(dataArray,bubbleDataArray,numberOfValues);

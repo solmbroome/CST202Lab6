@@ -1,6 +1,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 //File Name: other.cpp
 //Programmer: Scott Olmstead, Caleb Donovick, Sharon Smalls-Williams
+//Brief Description: This cpp file contains functions for the other header. ///!!!ADD TO THIS
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "other.h"
@@ -16,7 +17,6 @@ void CopyArray(int originalArray[],
                int sortedArray[],
                int numberOfValues)
 {
-    //int variables 
     int index; 
 
     //Use a for loop to copy the old array into the new array 
@@ -29,31 +29,33 @@ void CopyArray(int originalArray[],
 
 ///////////////////////////////////////////////////////////////////////////////
 // Name: ReadArrayData
-// Author: Sharon Smalls-Williams
-// Description: Read in the data from the file until there is no more data to
-//               read in.
+// Authors: Sharon Smalls-Williams
+// Description: Reads all the integers in from the input file, inputFile.
 ///////////////////////////////////////////////////////////////////////////////
-void ReadArrayData(ifstream& inputFile,
-                   int dataArray[],
-                   int& numberOfValues)
+void ReadArrayData(ifstream& fin, int dataArray[],int& numberOfValues)
 {
-    ///!!! Waiting for final version from Sharon @ 9:51 4.27.2013
+    ///!!!Clean Up Comments
+    //declare variable
     int number;
-    
-    //Initialize the number of values to zero for counting
+
+    //initialize counter
     numberOfValues = 0;
 
-    //While there is data to read from the input file
-    while(!(inputFile.eof()) && (numberOfValues < MAX_NUMBERS))
-    {
-        //Get the number from this line of the input file
-        inputFile >> number;
+    //get the data from the file
+    fin >> number;
 
-        //Set the array position to this number
-        dataArray[numberOfValues] = number;
-        
-        //Increment the number of values in the array
-        numberOfValues++;
+    //while there is still data to read from the input file, fin,
+    //and the numberofValues is less than MAX_NUMBERS
+    //store the integers into the dataArray[].
+    while ((fin) && (numberOfValues < MAX_NUMBERS))
+    {
+           dataArray[numberOfValues] = number;
+
+           //increment counter
+           numberOfValues++;
+
+           //get the next value
+           fin >> number;
     }
 }
 
