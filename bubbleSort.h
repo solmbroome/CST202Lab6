@@ -9,6 +9,9 @@
 
 #include "standard.h"
 
-void BubbleSort(int dataArray[], int length);
+void BubbleSort(int dataArray[],
+                int length,
+                int& comparisonCount,
+                int& swapCount);
 
 #endif

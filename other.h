@@ -9,6 +9,7 @@
 
 const int OUTPUT_COULMNS = 4;
 const int OUTPUT_COULMN_WIDTH = 10;
+const int ARRAY_OUTPUT_WIDTH = OUTPUT_COULMNS * OUTPUT_COULMN_WIDTH;
 
 void CopyArray(int originalArray[],
                int sortedArray[],
@@ -20,8 +21,13 @@ void ReadArrayData(ifstream& outputFile,
 
 void OutputArray(ofstream& outputFile,
                  int dataArray[],
-                 int& numberOfValues,
+                 int numberOfValues,
                  string title);
+
+void OutputSwapsAndCompares(ofstream& outputFile,
+                            int comparisonCount,
+                            int swapCount,
+                            string sortName);
 
 void PromptUserInput(ofstream& outputFile,
                      ifstream& inputFile);

@@ -14,9 +14,8 @@
 // Description: Search the numbers of the dataArray[] for the lowest value,
 //               and return the index of that value.
 ///////////////////////////////////////////////////////////////////////////////
-int MinLocation(int dataArray[], int first, int last)
+int MinLocation(int dataArray[], int first, int last, int& comparisonCount)
 {
-    //declare variables
     int location;
     int minIndex;
 
@@ -32,6 +31,10 @@ int MinLocation(int dataArray[], int first, int last)
         {
             minIndex = location;
         }
+
+        //Iterate comparison count, for a value in the array
+        // was compared to another
+        comparisonCount++;
     }
 
     return minIndex;
@@ -44,10 +47,9 @@ int MinLocation(int dataArray[], int first, int last)
 ///////////////////////////////////////////////////////////////////////////////
 void Swap(int dataArray[], int first, int second)
 {
-    //declare variable
     int tempInt;
 
-    //exchange the two values
+    //Swap the value at the first index with the value at the second index
     tempInt = dataArray[first];
     dataArray[first] = dataArray[second];
     dataArray[second] = tempInt;
@@ -58,26 +60,35 @@ void Swap(int dataArray[], int first, int second)
 // Author: Sharon Smalls-Williams
 // Description: Sort the numbers of the dataArray in ascending order.
 ///////////////////////////////////////////////////////////////////////////////
-void SelectionSort(int dataArray[], int length, int& numberOfSwaps)
+void SelectionSort(int dataArray[],
+                   int length,
+                   int& comparisonCount,
+                   int& swapCount)
 {
-    //declare variables
     int location;
     int minIndex;
 
-    //Initialize the swap value to zero
-    numberOfSwaps = 0;
+    //Initialize the swap count to zero for counting swaps
+    swapCount = 0;
+
+    //Initialize the comparison count to zero for counting comparisons
+    comparisonCount = 0;
 
     //Step through each number of the dataArray[]
     for (location = 0; location < length; location++)
     {
         //Locate the lowest number in the array from the index
         //to length
-        minIndex = MinLocation(dataArray,location,length-1);
+        minIndex = MinLocation(dataArray,
+                               location,
+                               length-1,
+                               comparisonCount);
 
         //Swap the value 
         Swap(dataArray, location, minIndex);
 
-        //increment counter
-        numberOfSwaps++;
+        //Increment the number of swaps, for a swap of array 
+        // positions occurred.
+        swapCount++;
     }
 }

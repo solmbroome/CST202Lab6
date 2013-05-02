@@ -9,10 +9,13 @@
 
 #include "standard.h"
 
-int MinLocation(int dataArray[], int first, int last);
+int MinLocation(int dataArray[], int first, int last, int& comparisonCount);
 
-void Swap(int dataArray[], int first, int second, int& numberOfSwaps);
+void Swap(int dataArray[], int first, int second);
 
-void SelectionSort(int dataArray[], int length, int& numberOfSwaps);
+void SelectionSort(int dataArray[],
+                   int length,
+                   int& comparisonCount,
+                   int& swapCount);
 
 #endif

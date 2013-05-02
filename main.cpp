@@ -41,7 +41,9 @@ int main(void)
 
     int numberOfValues;
     int selectionSwaps;
+    int selectionComparisons;
     int bubbleSwaps;
+    int bubbleComparisons;
     int dataArray[MAX_NUMBERS];
     int selectionDataArray[MAX_NUMBERS];
     int bubbleDataArray[MAX_NUMBERS];
@@ -62,13 +64,19 @@ int main(void)
     CopyArray(dataArray,selectionDataArray,numberOfValues);
 
     //Perform selection sort on the data
-    SelectionSort(selectionDataArray,numberOfValues,selectionSwaps);
+    SelectionSort(selectionDataArray,
+                  numberOfValues,
+                  selectionComparisons,
+                  selectionSwaps);
 
     //Copy the array data into the bubble sort array
     CopyArray(dataArray,bubbleDataArray,numberOfValues);
 
     //Perform bubble sort on the data
-    BubbleSort(bubbleDataArray,numberOfValues);
+    BubbleSort(bubbleDataArray,
+               numberOfValues,
+               bubbleComparisons,
+               bubbleSwaps);
 
     //Output the unsorted selection sort array to the output file
     OutputArray(outputFile,
@@ -81,6 +89,13 @@ int main(void)
                 selectionDataArray,
                 numberOfValues,
                 "Selection Sort Sorted");
+    
+    //Output the number of swaps and comparisons that occurred
+    // int the selection sort algorithm
+    OutputSwapsAndCompares(outputFile,
+                           selectionComparisons,
+                           selectionSwaps,
+                           "Selection Sort");
 
     //Output the unsorted bubble sort array to the output file
     OutputArray(outputFile,
@@ -93,6 +108,13 @@ int main(void)
                 bubbleDataArray,
                 numberOfValues,
                 "Bubble Sort Sorted");
+
+    //Output the number of swaps and comparisons that occurred
+    // int the bubble sort algorithm
+    OutputSwapsAndCompares(outputFile,
+                           bubbleComparisons,
+                           bubbleSwaps,
+                           "Bubble Sort");
 
     //Close input and output files
     inputFile.close();

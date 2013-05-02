@@ -68,26 +68,22 @@ void ReadArrayData(ifstream& inputFile,
 ///////////////////////////////////////////////////////////////////////////////
 void OutputArray(ofstream& outputFile,
                  int dataArray[],
-                 int& numberOfValues,
+                 int numberOfValues,
                  string title)
 {
     int index;
-    int tempOutputWidth;
-    
-    //Set the output width to the length of the four columns
-    tempOutputWidth = OUTPUT_COULMNS * OUTPUT_COULMN_WIDTH;
 
     //Output some whitespace to the output file
     outputFile << endl;
 
     //Output a divider to the output file.
-    OutputDivider(outputFile,'-',tempOutputWidth);
+    OutputDivider(outputFile,'_',ARRAY_OUTPUT_WIDTH);
 
     //Output the title to the output file
-    CenterOutput(outputFile,title,tempOutputWidth);
+    CenterOutput(outputFile,title,ARRAY_OUTPUT_WIDTH);
 
     //Output a divider to the output file.
-    OutputDivider(outputFile,'-',tempOutputWidth);
+    OutputDivider(outputFile,'=',ARRAY_OUTPUT_WIDTH);
 
     //For all the indexes in the passed array
     for(index = 0; index < numberOfValues; index++)
@@ -109,7 +105,48 @@ void OutputArray(ofstream& outputFile,
     outputFile << endl;
     
     //Output a divider to the output file.
-    OutputDivider(outputFile,'_',tempOutputWidth);
+    OutputDivider(outputFile,'_',ARRAY_OUTPUT_WIDTH);
+
+    //Insert a line break in the output file
+    outputFile << endl;
+}
+
+void OutputSwapsAndCompares(ofstream& outputFile,
+                            int comparisonCount,
+                            int swapCount,
+                            string sortName)
+{
+    //Output a divider to the output file.
+    OutputDivider(outputFile,'_',ARRAY_OUTPUT_WIDTH);
+    
+    //Output a title for the comparisons and swaps
+    outputFile << "Comparisons and Swaps for " 
+               << sortName
+               << endl;
+
+    //Output a divider to the output file.
+    OutputDivider(outputFile,'=',ARRAY_OUTPUT_WIDTH);
+
+    //Output the number of comparisons to the output file
+    outputFile << left
+               << setw(20) 
+               << "Number of Comparisons: "
+               << comparisonCount
+               << endl;
+
+    //Output the number of swaps to the output file
+    outputFile << left
+               << setw(20) 
+               << "Number of Swaps: "
+               << swapCount
+               << endl;
+
+    //Output a divider to the output file.
+    OutputDivider(outputFile,'_',ARRAY_OUTPUT_WIDTH);
+
+    //Insert a line break in the output file
+    outputFile << endl;
+                
 }
 
 ///////////////////////////////////////////////////////////////////////////////
