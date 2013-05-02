@@ -73,9 +73,6 @@ void OutputArray(ofstream& outputFile,
 {
     int index;
 
-    //Output some whitespace to the output file
-    outputFile << endl;
-
     //Output a divider to the output file.
     OutputDivider(outputFile,'_',ARRAY_OUTPUT_WIDTH);
 
@@ -129,14 +126,14 @@ void OutputSwapsAndCompares(ofstream& outputFile,
 
     //Output the number of comparisons to the output file
     outputFile << left
-               << setw(20) 
+               << setw(SWAP_COMPARE_WIDTH) 
                << "Number of Comparisons: "
                << comparisonCount
                << endl;
 
     //Output the number of swaps to the output file
     outputFile << left
-               << setw(20) 
+               << setw(SWAP_COMPARE_WIDTH) 
                << "Number of Swaps: "
                << swapCount
                << endl;

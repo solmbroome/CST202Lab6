@@ -10,6 +10,7 @@
 const int OUTPUT_COULMNS = 4;
 const int OUTPUT_COULMN_WIDTH = 10;
 const int ARRAY_OUTPUT_WIDTH = OUTPUT_COULMNS * OUTPUT_COULMN_WIDTH;
+const int SWAP_COMPARE_WIDTH = 25;
 
 void CopyArray(int originalArray[],
                int sortedArray[],
