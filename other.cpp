@@ -1,7 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 //File Name: other.cpp
 //Programmer:  Caleb Donovick, Sharon Smalls-Williams, and Scott Olmstead
-//Brief Description: This cpp file contains functions for the other header.
+//Brief Description: Contains the function definitions for various
+//                    non-sorting algorithms
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "other.h"
