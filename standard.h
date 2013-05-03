@@ -1,8 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 //File Name:  standard.h
 //Programmer: Caleb Donovick, Sharon Smalls-Williams, and Scott Olmstead
-//Brief Description: Contains the named constants used throughout various
-//                    routines in the program
+//Brief Description: Contains the named constants and include directives used
+//                    throughout various routines in the program
 ///////////////////////////////////////////////////////////////////////////////
 
 #ifndef standard_h
