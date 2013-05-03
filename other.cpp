@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //File Name: other.cpp
-//Programmer:  Caleb Donovick, Sharon Smalls-Williams, Scott Olmstead
+//Programmer:  Caleb Donovick, Sharon Smalls-Williams, and Scott Olmstead
 //Brief Description: This cpp file contains functions for the other header.
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -11,33 +11,35 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Name: CopyArray
 // Author: Caleb Donovick
-// Description: Copies all the members of an int array into a second int array
+// Description: Fills a destination integer array with values from a source
+//               integer array.
 ///////////////////////////////////////////////////////////////////////////////
-void CopyArray(int originalArray[],
-               int sortedArray[],
+void CopyArray(int sourceArray[],
+               int destinationArray[],
                int numberOfValues)
 {
     int index; 
 
-    //Use a for loop to copy the old array into the new array 
+    //Go through each index in the arrays
     for(index = 0; index < numberOfValues; index++) 
     {
-        //Store the member of the original array in the sortedArray
-        sortedArray[index] = originalArray[index];
+        //Store the value at this index of the source array into this index
+        // in the the destination array
+        destinationArray[index] = sourceArray[index];
     }
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 // Name: ReadArrayData
 // Author: Sharon Smalls-Williams
-// Description: Read in the data from the file until there is no more data to
-//               read in.
+// Description: Reads from a input file that contains integer values separated
+//               by white space. Each integer value in that file is placed 
+//               into a integer array in the corresponding 0-based index.
 ///////////////////////////////////////////////////////////////////////////////
 void ReadArrayData(ifstream& inputFile,
                    int dataArray[],
                    int& numberOfValues)
 {
-    ///!!! Waiting for final version from Sharon @ 9:51 4.27.2013
     int number;
     
     //Initialize the number of values to zero for counting
@@ -46,16 +48,18 @@ void ReadArrayData(ifstream& inputFile,
     //Get the number from this line of the input file
     inputFile >> number;
 
-    //While there is data to read from the input file
+    //While there is data to read from the input file and the number of 
+    // items read so far is less than the maximum permitted by the length 
+    // of the array
     while(inputFile && (numberOfValues < MAX_NUMBERS))
     {
-        //Set the array position to this number
+        //Set the array value at this index to this number
         dataArray[numberOfValues] = number;
         
         //Increment the number of values in the array
         numberOfValues++;
 
-        //Get the number from this line of the input file
+        //Get a integer number from this line of the input file
         inputFile >> number;
     }
 }
@@ -108,6 +112,13 @@ void OutputArray(ofstream& outputFile,
     outputFile << endl;
 }
 
+///////////////////////////////////////////////////////////////////////////////
+// Name: OutputSwapsAndCompares
+// Author: Scott Olmstead
+// Description: Takes two values, a swap count and a comparison count and
+//               outputs them to the output file with a heading determined by
+//               the name of the sort.
+///////////////////////////////////////////////////////////////////////////////
 void OutputSwapsAndCompares(ofstream& outputFile,
                             int comparisonCount,
                             int swapCount,
@@ -305,11 +316,11 @@ void OutputTeamInformation(ofstream& outputFile,
 	//Output a divider to the output file stream of default width.
 	OutputDivider(outputFile, '*', width);
 
-    //Center the student's name and output to the output file stream.
-	CenterOutput(outputFile, TEAM_MEMBERS, width);
-
-	//Center the student's name and output to the output file stream.
+    //Center the team's name and output to the output file stream.
 	CenterOutput(outputFile, TEAM_NAME, width);
+
+    //Center the members' names and output to the output file stream.
+	CenterOutput(outputFile, TEAM_MEMBERS, width);
 
 	//Center the college name and output to the output file stream.
 	CenterOutput(outputFile, COLLEGE, width);

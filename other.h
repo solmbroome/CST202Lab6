@@ -1,17 +1,21 @@
 ///////////////////////////////////////////////////////////////////////////////
 //File Name: other.h
-//Programmer: Caleb Donovick, Sharon Smalls-Williams, Scott Olmstead
+//Programmer: Caleb Donovick, Sharon Smalls-Williams, and Scott Olmstead
+//Description: Contains the named constants and function prototypes for
+//               various non-sorting functions.
 ///////////////////////////////////////////////////////////////////////////////
 #ifndef other_h
 #define other_h
 
 #include "standard.h"
 
+//Named constants for other.cpp
 const int OUTPUT_COULMNS = 4;
 const int OUTPUT_COULMN_WIDTH = 10;
 const int ARRAY_OUTPUT_WIDTH = OUTPUT_COULMNS * OUTPUT_COULMN_WIDTH;
 const int SWAP_COMPARE_WIDTH = 25;
 
+//Function prototypes for other.cpp
 void CopyArray(int originalArray[],
                int sortedArray[],
                int numberOfValues);

@@ -1,7 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 //File Name:  standard.h
-//Programmer: Caleb Donovick, Sharon Smalls-Williams, Scott Olmstead
-//Brief Description: This header file contains the other class definition.
+//Programmer: Caleb Donovick, Sharon Smalls-Williams, and Scott Olmstead
+//Brief Description: Contains the named constants used throughout various
+//                    routines in the program
 ///////////////////////////////////////////////////////////////////////////////
 
 #ifndef standard_h
@@ -27,12 +28,14 @@ const string TEAM_MEMBERS = "Caleb Donovick, Sharon Smalls-Williams,"
 const string COURSE = "CST 202"; 
 const string LAB_NAME = "Lab 6";
 
+//C-String array containing possible input names parallel to OUTPUT_NAMES
 const char INPUT_NAMES[FILE_COUNT][MAX_NAME_LENGTH] = 
                              {"SmallRan.txt",
                               "Descend.txt",
                               "Ascend.txt",
                               "LargeRan.txt"};
 
+//C-String array containing possible output names parallel to INPUT_NAMES
 const char OUTPUT_NAMES[FILE_COUNT][MAX_NAME_LENGTH] = 
                               {"Result1.txt",
                                "Result2.txt",

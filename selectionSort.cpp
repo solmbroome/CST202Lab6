@@ -1,30 +1,26 @@
 ///////////////////////////////////////////////////////////////////////////////
 //File Name: selectionSort.cpp
-//Programmer: Caleb Donovick, Sharon Smalls-Williams, Scott Olmstead
-//Brief Description: This cpp file contains functions for the selectionSort
-//                   header.
+//Programmer: Caleb Donovick, Sharon Smalls-Williams, and Scott Olmstead
+//Brief Description: Contains the function definitions of the selection sort
+//                    implementation
 ///////////////////////////////////////////////////////////////////////////////
 #include "selectionSort.h"
-
-///!!! CLEAN UP COMMENTS, VERIFY CORRECTNESS
 
 ///////////////////////////////////////////////////////////////////////////////
 // Name: MinLocation
 // Author: Sharon Smalls-Williams
-// Description: Search the numbers of the dataArray[] for the lowest value,
-//               and return the index of that value.
+// Description: Iterates through a integer array, comparing values to
+//               determine the smallest integer value. Returns that value(int).
 ///////////////////////////////////////////////////////////////////////////////
 int MinLocation(int dataArray[], int first, int last, int& comparisonCount)
 {
     int location;
     int minIndex;
-
-    //initialize variable
+    
+    //Initialize the smallest index as the lower end of the search boundary
     minIndex = first;
 
-    //step through the array checking to see if any number is smaller than
-	//minIndex
-	//minIndex is the current first value in this part of the array
+    //Step through the rest of the indexes in the array
     for (location = first + 1; location <= last; location++)
     {
         if (dataArray[location] < dataArray[minIndex])
@@ -43,7 +39,7 @@ int MinLocation(int dataArray[], int first, int last, int& comparisonCount)
 ///////////////////////////////////////////////////////////////////////////////
 // Name: Swap
 // Author: Sharon Smalls-Williams
-// Description: To swap out the numbers to the lowest one.
+// Description: Swaps the two passed positions in a given integer array.
 ///////////////////////////////////////////////////////////////////////////////
 void Swap(int dataArray[], int first, int second)
 {
@@ -58,7 +54,13 @@ void Swap(int dataArray[], int first, int second)
 ///////////////////////////////////////////////////////////////////////////////
 // Name: SelectionSort
 // Author: Sharon Smalls-Williams
-// Description: Sort the numbers of the dataArray in ascending order.
+// Description: Utilizes the selection sort algorithm to sort an array of
+//               integer values in ascending order by iterating through a 
+//               integer array, locating the index of the smallest value in
+//               that array, and switching that value at the smallest index to
+//               the current index and visa versa. Also counts the number of
+//               comparisons and swaps that occur in this process and stores
+//               the results to reference variables.
 ///////////////////////////////////////////////////////////////////////////////
 void SelectionSort(int dataArray[],
                    int length,

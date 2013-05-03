@@ -1,7 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////
-//File Name: bubbleSort.h
-//Programmer: Caleb Donovick, Sharon Smalls-Williams, Scott Olmstead
-//Brief Description: This cpp files contains the functions for bubbleSort.h
+//File Name: bubbleSort.cpp
+//Programmer: Caleb Donovick, Sharon Smalls-Williams, and Scott Olmstead
+//Brief Description: Contains the function definitions for the bubble sort
+//                    implementation
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "bubbleSort.h"
@@ -9,7 +10,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Name: BubbleSort
 // Author: Scott Olmstead
-// Description:
+// Description: Performs a bubble sort: iterates through all indexes of an 
+//               integer array, comparing the current position with the next 
+//               position. If the next position is smaller than the current
+//               positions, the positions are swapped, and the next adjacent
+//               indexes are compared. Also counts the number of comparisons 
+//               and swaps that occur during this process and stores the
+//               results in reference variables.
 ///////////////////////////////////////////////////////////////////////////////
 void BubbleSort(int dataArray[],
                 int length,

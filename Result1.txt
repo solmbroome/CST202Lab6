@@ -1,6 +1,6 @@
 ************************************************************
- Caleb Donovick, Sharon Smalls-Williams, and Scott Olmstead
                            Team 1
+ Caleb Donovick, Sharon Smalls-Williams, and Scott Olmstead
                   Broome Community College
                           CST 202
                            Lab 6

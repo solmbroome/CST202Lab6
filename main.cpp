@@ -1,33 +1,83 @@
 ///////////////////////////////////////////////////////////////////////////////
 //Lab 6 Grading Block
+//Team: Team 1
+//Members: Sharon Smalls-Williams, Caleb Donovick, and Scott Olmstead
 //Grade:
 //General Comments:
 //
 ///////////////////////////////////////////////////////////////////////////////
-
-///////////////////////////////////////////////////////////////////////////////
 //                            Documentation Block                            //
 ///////////////////////////////////////////////////////////////////////////////
-///!!! CLEAN UP AND FINISH
-// Programmers: Caleb Donovick, Sharon Smalls-Williams, Scott Olmstead
+// Programmers: Caleb Donovick, Sharon Smalls-Williams, and Scott Olmstead
 // Project Name: Lab 6
-// I
-//PromptUserInput - Prompt the user to choose an input file to process.
-//
-//OutputTeamInformation - Output the heading for the output file, OutputFile.
-//
-//ReadArrayData - Read the array data from the input file, InputFile, until
-//                all the information is read in.
-//
-//CopyArray - Copy the unsorted array data into the selected sort array.
-//
-//SelectionSort - Perform selection sort on the data, sorting numbers in
-//                ascending order.
-//
-// BubbleSort - Perform bubble sort on the data, sorting numbers in
-//              ascending order.
-//
-//OutputArray - Output the array to the output file, OutputFile.
+// Description: Reads integers from an input file into a integer array. The 
+//               array is then copied twice and sorted using bubble sort and
+//               selection sort algorithms. The number of swaps and comparisons
+//               are counted during this process. The sorted arrays along with
+//               the comparisons and swaps for each are output to an output
+//               file.
+//   Input:
+//      A number(int) indicating the input file that the use would like to
+//       open is input from the keyboard.
+//      A undetermined amount of numbers(int) are read from an input file 
+//       into a integer array(int[]) until either the array is full or the
+//       file is empty.
+//   Process:
+//      A input file(ifstream) and output file(ifstream) are opened based on
+//       a selection(int) given by a user via keyboard input.
+//      Data(int) is read from an input file into a integer array(int[]).
+//      The array(int[]) with the input is copied into a array(int[]) that
+//       is to be sorted using the selection sort algorithm
+//      The copied array(int[]) is sorted, ascending, using the selection
+//       sort algorithm.
+//      The number of swaps(int) and number of comparisons(int) that occur 
+//       during the selection sort are stored into variables(int).
+//      The array(int[]) with the input is copied into a array(int[]) that
+//       is to be sorted using the bubble sort algorithm
+//      The copied array(int[]) is sorted, ascending, using the bubble
+//       sort algorithm.
+//      The number of swaps(int) and number of comparisons(int) that occur
+//       during the bubble sort are stored into variables(int).
+//      The input file and output file streams are closed.
+//   Output:
+//      A list of input files with a heading is output to the console window.
+//      Where appropriate, dividers are output to the console window.
+//      A prompt asking the user to enter the number representing the file from
+//       the input list is output to the console window.
+//      A message stating success or failure regarding the opening of the input
+//       file is output to the console window.
+//      A message stating what file the output will be written to is output to
+//       the console window.
+//      Where appropriate, dividers are output to the to the output
+//       file(ofstream).
+//      A heading stating the information of the lab and the team is output to
+//       the output file.
+//      A heading for the unsorted selection sort array is output to the output
+//       file.
+//      The unsorted array(int[]) is output to the output file.
+//      A heading for the sorted selection sort array is output to the output
+//       file.
+//      The array(int[]) sorted using selection sort is output to the output 
+//       file.
+//      A heading for the comparisons and swaps for the selection sort is 
+//       output to the output file.
+//      The number of comparisons(int) for the selection sort is output to
+//       the output file.
+//      The number of swaps(int) for the selection sort is output to the output
+//       file.
+//      A heading for the unsorted bubble sort array is output to the output 
+//       file.
+//      The unsorted array(int[]) is output to the output file.
+//      A heading for the sorted bubble sort array is output to the output 
+//       file.
+//      The array(int[]) sorted using bubble sort is output to the output 
+//       file.
+//      A heading for the comparisons and swaps for the bubble sort is output
+//       to the output file.
+//      The number of comparisons(int) for the bubble sort is output to the 
+//       output file.
+//      The number of swaps(int) for the bubble sort is output to the output
+//       file.
 //////////////////////////////////////////////////////////////////////////////
 #include "bubbleSort.h"
 #include "other.h"
