@@ -23,8 +23,12 @@ int MinLocation(int dataArray[], int first, int last, int& comparisonCount)
     //Step through the rest of the indexes in the array
     for (location = first + 1; location <= last; location++)
     {
+        //If this location's value is less than the smallest
+        // value read so far
         if (dataArray[location] < dataArray[minIndex])
         {
+            //Set the minimum value's index to this 
+            // value's index
             minIndex = location;
         }
 
@@ -33,6 +37,7 @@ int MinLocation(int dataArray[], int first, int last, int& comparisonCount)
         comparisonCount++;
     }
 
+    //Return the smallest value's index
     return minIndex;
 }
 
