@@ -23,7 +23,7 @@
 //       into a integer array(int[]) until either the array is full or the
 //       file is empty.
 //   Process:
-//      A input file(ifstream) and output file(ifstream) are opened based on
+//      A input file(ifstream) and output file(ofstream) are opened based on
 //       a selection(int) given by a user via keyboard input.
 //      Data(int) is read from an input file into a integer array(int[]).
 //      The array(int[]) with the input is copied into a array(int[]) that
@@ -109,7 +109,10 @@ int main(void)
     
     //Read the array data from the input file
     ReadArrayData(inputFile,dataArray,numberOfValues);
-    
+
+    //Close the input file, for input processing has finished.
+    inputFile.close();
+
     //Copy the array data into the selection sort array
     CopyArray(dataArray,selectionDataArray,numberOfValues);
 
@@ -166,8 +169,7 @@ int main(void)
                            bubbleSwaps,
                            "Bubble Sort");
 
-    //Close input and output files
-    inputFile.close();
+    //Close the output file
     outputFile.close();
 
     return 0;

@@ -12,11 +12,11 @@
 // Author: Scott Olmstead
 // Description: Performs a bubble sort: iterates through all indexes of an 
 //               integer array, comparing the current position with the next 
-//               position. If the next position is smaller than the current
-//               positions, the positions are swapped, and the next adjacent
-//               indexes are compared. Also counts the number of comparisons 
-//               and swaps that occur during this process and stores the
-//               results in reference variables.
+//               position. If the next position's value is smaller than the
+//               current position's value, the positions are swapped, and the
+//               next adjacent values are compared. Also counts the number of
+//               comparisons and swaps that occur during this process and
+//               stores the results in reference variables.
 ///////////////////////////////////////////////////////////////////////////////
 void BubbleSort(int dataArray[],
                 int length,

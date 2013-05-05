@@ -35,7 +35,9 @@ void CopyArray(int sourceArray[],
 // Author: Sharon Smalls-Williams
 // Description: Reads from a input file that contains integer values separated
 //               by white space. Each integer value in that file is placed 
-//               into a integer array in the corresponding 0-based index.
+//               into a integer array in the corresponding 0-based index. 
+//               Input is read until the end of file or until the array is
+//               full.
 ///////////////////////////////////////////////////////////////////////////////
 void ReadArrayData(ifstream& inputFile,
                    int dataArray[],
