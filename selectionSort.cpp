@@ -63,8 +63,8 @@ void Swap(int dataArray[], int first, int second)
 //               integer values in ascending order by iterating through a 
 //               integer array, locating the index of the smallest value in
 //               that array, and switching that value at the smallest index to
-//               the current index and visa versa. Also counts the number of
-//               comparisons and swaps that occur in this process and stores
+//               the current index ("top of the array"). Also counts the number
+//               of comparisons and swaps that occur in this process and stores
 //               the results to reference variables.
 ///////////////////////////////////////////////////////////////////////////////
 void SelectionSort(int dataArray[],

@@ -9,7 +9,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 // Name: BubbleSort
-// Author: Scott Olmstead
+// Author: Caleb Donovick
 // Description: Performs a bubble sort: iterates through all indexes of an 
 //               integer array, comparing the current position with the next 
 //               position. If the next position's value is smaller than the
